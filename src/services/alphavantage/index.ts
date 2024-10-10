@@ -3,7 +3,7 @@ import { StockData } from "../../types/stockData";
 
 // Set up base URL and API key
 const BASE_URL = "https://www.alphavantage.co/query";
-const API_KEY = "Q2Y7K9MKWMDET2SH";
+const API_KEY = "RIBXT3XYLI69PC0Q";
 
 // Function to fetch stock data based on the selected interval
 export const getStockData = async (
