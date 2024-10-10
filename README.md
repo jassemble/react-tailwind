@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Stock Data Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Stock Data Viewer! This React application allows users to search for stock data and view historical price charts using the Alpha Vantage API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Stock Search**: Users can search for stocks using an autocomplete search bar that fetches stock names and symbols dynamically.
+- **Dynamic Charting**: View historical price data in a responsive line chart, with options to display Open, High, Low, and Close prices.
+- **Interval Selection**: Users can select the data interval (Daily, Weekly, Monthly) to customize the chart view.
+- **Error Handling**: User-friendly error messages are displayed when data fetching fails or if there is no data available.
+- **Loading State**: A loading spinner indicates when data is being fetched, providing a smooth user experience.
 
-### `npm start`
+## Major Techniques Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Custom Hooks**: Created `useStockSearch` to encapsulate stock fetching logic, promoting code reusability and separation of concerns.
+- **Caching Mechanism**: Implemented a caching mechanism to store previously fetched stock data, reducing redundant API calls and improving load times.
+- **Debouncing**: Implemented debouncing in the search input to optimize API calls and reduce unnecessary requests while the user is typing.
+- **Responsive Design**: Built with Tailwind CSS to ensure the application is visually appealing and works seamlessly on both desktop and mobile devices.
+- **Error Handling**: Implemented a comprehensive error handling mechanism to gracefully manage API response errors and provide feedback to users.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and improved code quality.
+- **Tailwind CSS**: For styling and layout.
+- **Recharts**: For creating responsive line charts.
+- **Alpha Vantage API**: For fetching stock data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/stock-data-viewer.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd stock-data-viewer
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Live Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Check out the live version of the application at: [Stock Data Viewer](https://react-tailwind-livid.vercel.app/)
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License. See the LICENSE file for details.
